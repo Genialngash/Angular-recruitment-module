@@ -1,0 +1,62 @@
+{
+  "vacancy": [
+    {
+      "vacancy": "some",
+      "deadlineDate": "2022-01-29T00:00:00.000Z",
+      "department": "Technical",
+      "requirements": "none",
+      "vacanciesNumber": "78",
+      "id": 1
+    },
+    {
+      "vacancy": "job",
+      "deadlineDate": "2022-01-14T00:00:00.000Z",
+      "department": "Finance",
+      "requirements": "disciplined",
+      "vacanciesNumber": "9",
+      "id": 2
+    },
+    {
+      "vacancy": "somtheing else",
+      "deadlineDate": "2022-01-29T00:00:00.000Z",
+      "department": "Finance",
+      "requirements": "none",
+      "vacanciesNumber": "5",
+      "id": 3
+    },
+    {
+      "vacancy": "none",
+      "deadlineDate": "2022-01-31T00:00:00.000Z",
+      "department": "Technical",
+      "requirements": "<p><strong>none 1</strong> </p><h3>none 3</h3><p></p>",
+      "vacanciesNumber": "7",
+      "id": 4
+    },
+    {
+      "vacancy": "none",
+      "deadlineDate": "2022-01-31T00:00:00.000Z",
+      "department": "Technical",
+      "requirements": "<p><strong>none 1</strong> </p><h3>none 3</h3><p></p>",
+      "vacanciesNumber": "7",
+      "id": 5
+    },
+    {
+      "vacancy": "34",
+      "deadlineDate": "2022-01-31T00:00:00.000Z",
+      "department": "Technical",
+      "requirements": "<p>erer</p>",
+      "vacanciesNumber": "ee",
+      "id": 6
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

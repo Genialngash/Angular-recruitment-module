@@ -1,0 +1,37 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  table {
+    width: 100%;
+  }
+  
+  .mat-form-field {
+    font-size: 14px;
+    width: 100%;
+    float: right;
+  }
+  
+  .container{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .pull-right{
+    float: right;
+  }
+
+  th{
+    text-align: left !important;
+    background-color: rgb(208, 209, 209);
+    color: rgb(0, 0, 0);
+    /* opacity: 0.5; */
+    text-decoration-color: black;
+  }
+  table{
+    font-weight: 100px;
+    font-size: 12px;
+    font-family: monospace;
+  }
+  .add-vacany-button{
+  background-color: rgb(26, 99, 194); 
+  color: rgb(255, 255, 255);
+}

@@ -1,0 +1,74 @@
+<mat-card class="whole-page">
+
+    <mat-card-title>Add a vacancy</mat-card-title>
+
+    <div style="padding-top: 10;">
+        <form [formGroup]="vacancyForm" fxLayout="column" fxFlex>
+            <div fxLayout="row">
+                <mat-form-field appearance="outline">
+                    <mat-label>vacancy</mat-label>
+                    <input formControlName="vacancy_name" matInput placeholder="vacancy">
+                    <mat-hint>vacancies</mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>Departments</mat-label>
+                    <mat-select formControlName="department" placeholder="department">
+                        <mat-option value="IT">IT</mat-option>
+                        <mat-option value="Finance">Finance</mat-option>
+                        <mat-option value="Sales">Sales</mat-option>
+                        <mat-option value="Technical">Technical</mat-option>
+                    </mat-select>
+                    <mat-hint>department</mat-hint>
+                </mat-form-field>
+            </div>
+            <div fxLayout="row">
+                <mat-form-field appearance="outline" class="example-form-field">
+                    <mat-label>Application deadline</mat-label>
+                    <input formControlName="deadline_date" matInput [matDatepicker]="datepicker">
+                    <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+                    <mat-datepicker #datepicker>
+                        <mat-datepicker-actions>
+                            <button mat-button matDatepickerCancel>Cancel</button>
+                            <button mat-raised-button color="primary" matDatepickerApply>OK</button>
+                        </mat-datepicker-actions>
+                    </mat-datepicker>
+                </mat-form-field>
+                <mat-form-field appearance="outline">
+                    <mat-label>N.O vacancies</mat-label>
+                    <input formControlName="vacancies_number" matInput placeholder="N.O vacancies">
+                    <mat-hint>Number of vacancies</mat-hint>
+                </mat-form-field>
+            </div>
+            <h2 style="margin-top: 10px;">Requirements</h2>
+            <div class="NgxEditor__Wrapper">
+                <ngx-editor-menu [editor]="editor" [toolbar]="toolbar"> </ngx-editor-menu>
+                <ngx-editor formControlName="requirements" [editor]="editor" [disabled]="false"
+                    [placeholder]="'Requirements...'">
+                </ngx-editor>
+            </div>
+
+        </form>
+        <h2 style="margin-top: 10px;">Evaluation Matrix</h2>
+
+        <tr>
+            <div class="form-group" *ngFor=" let card of scoreSheetsArray; let i = index">
+                <div>
+                    <input [(ngModel)]="card.score_identity" type="text">
+                    <input [(ngModel)]="card.score_value" type="Number">
+                    <mat-icon (click)="this.removeScoreCard(i)">remove_circle</mat-icon>
+
+                </div>
+            </div>
+         <mat-icon (click)="this.addScoreCard()">add_circle</mat-icon>
+        </tr>
+
+        
+
+        <mat-card-actions align="end">
+            <button mat-raised-button mat-dialog-close color="warn">close</button>
+            <button style="margin-left: 30px;" mat-raised-button color="primary" (click)="updateVacancy()">Update</button>
+
+        </mat-card-actions>
+
+    </div>
+</mat-card>
